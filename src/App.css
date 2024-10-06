@@ -1,0 +1,92 @@
+/* Estilo general para los botones */
+button {
+  width: 70px; /* Tamaño del botón */
+  height: 70px; /* Tamaño del botón */
+  font-size: 1.4rem; /* Tamaño del texto */
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+/* Para asegurar que todos los botones en los divs tengan la misma separación */
+.d-flex {
+  display: flex; /* Activamos flexbox */
+  justify-content: center; /* Centrar los botones horizontalmente */
+  gap: 10px; /* Espacio entre botones */
+  margin-bottom: 10px; /* Espacio vertical entre filas de botones */
+}
+
+/* Estilo para el botón 0, que debe cubrir el espacio de los botones 1 y 2 */
+#zero {
+  width: 155px; /* Aumentamos el tamaño del botón "0" */
+}
+
+/* Alinear el botón decimal para que tenga el mismo tamaño que los demás botones */
+#decimal {
+  width: 71px; /* Mantener el mismo tamaño que los demás botones */
+}
+
+/* Estilo para el botón igual */
+#equals {
+  width: 71px; /* Tamaño del botón igual */
+}
+
+/* Botones numéricos */
+button.number {
+  background-color: #f1f1f1; /* Color de fondo */
+  color: #000;
+}
+
+button.number:hover {
+  background-color: #706f6f; /* Color al pasar el mouse */
+}
+
+/* Botones de operaciones aritméticas */
+button.operator {
+  background-color: #ff9500; /* Color de fondo */
+  color: white;
+}
+
+button.operator:hover {
+  background-color: #6c4204; /* Color al pasar el mouse */
+}
+
+/* Botones especiales: C, +/- y % */
+button.special {
+  background-color: #a5a5a5; /* Color de fondo */
+  color: white;
+}
+
+button.special:hover {
+  background-color: #4e4d4d; /* Color al pasar el mouse */
+}
+
+/* Estilo del display */
+#display {
+  background-color: #333; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 1.5rem; /* Tamaño de fuente */
+  text-align: right; /* Alinear texto a la derecha */
+}
+
+#answer,
+#expression {
+  min-height: 40px; /* Altura mínima */
+}
+
+/* Estilo del contenedor de la calculadora */
+#calculator {
+  background-color: #2e3b4e; /* Color de fondo */
+  max-width: 320px; /* Ancho máximo */
+  margin: 0 auto; /* Centrar */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+h1 {
+  color: #d3d3d3 !important;
+}
+
