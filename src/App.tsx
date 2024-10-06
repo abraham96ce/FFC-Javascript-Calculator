@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { roundToPrecision } from "./utils";
+import { create, all } from 'mathjs';
 
 
 /**
@@ -18,6 +19,7 @@ function App() {
   const[expression, setExpression] = useState(""); // Expresión matemática en formato de texto
   const et = expression.trim(); // Expresión recortada para manejo interno
   const [lastResult, setLastResult] = useState(""); // Último resultado calculado
+  const math = create(all, {}); // Crea una instancia de math.js
 
 
   /**
@@ -145,7 +147,7 @@ function App() {
     
     let result;
     try {
-      result = eval(newExpression);
+      result = math.evaluate(newExpression);
       result = roundToPrecision(result, 4); // Redondeo a 4 decimales
     }catch(error){
       result = "Error"; // Manejo de errores en caso de que la evaluación falle
